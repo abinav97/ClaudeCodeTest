@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Word Translator - English to Spanish & Tamil</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Word Translator</h1>
+        <p class="subtitle">Translate English words to Spanish and Tamil</p>
+
+        <div class="input-section">
+            <label for="englishWord">Enter an English word:</label>
+            <input
+                type="text"
+                id="englishWord"
+                placeholder="e.g., hello, book, water"
+                autocomplete="off"
+            >
+            <button id="translateBtn">Translate</button>
+        </div>
+
+        <div class="results" id="results" style="display: none;">
+            <div class="result-card spanish-card">
+                <h2>Spanish</h2>
+                <div class="translation" id="spanishTranslation">-</div>
+            </div>
+
+            <div class="result-card tamil-card">
+                <h2>Tamil</h2>
+                <div class="translation" id="tamilTranslation">-</div>
+                <div class="pronunciation-label">Pronunciation (English):</div>
+                <div class="pronunciation" id="tamilPronunciation">-</div>
+            </div>
+        </div>
+
+        <div class="loading" id="loading" style="display: none;">
+            <div class="spinner"></div>
+            <p>Translating...</p>
+        </div>
+
+        <div class="error" id="error" style="display: none;"></div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
